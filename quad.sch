@@ -214,33 +214,14 @@ F 3 "" H 5700 4700 50  0001 C CNN
 	1    5700 4700
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:Crystal_Small XTAL1
-U 1 1 5E235CEC
-P 5850 1850
-F 0 "XTAL1" H 5850 2075 50  0000 C CNN
-F 1 "16Mhz" H 5850 1984 50  0000 C CNN
-F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 5850 1850 50  0001 C CNN
-F 3 "~" H 5850 1850 50  0001 C CNN
-	1    5850 1850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5600 1850 5750 1850
 Wire Wire Line
 	5900 2500 5900 2000
 Wire Wire Line
 	5900 2000 6100 2000
 Wire Wire Line
-	6100 2000 6100 1850
-Wire Wire Line
-	5600 1850 5600 2000
-Wire Wire Line
 	5600 2000 5800 2000
 Wire Wire Line
 	5800 2000 5800 2500
-Wire Wire Line
-	5950 1850 6100 1850
 $Comp
 L Device:C_Small CX1
 U 1 1 5E23DDD0
@@ -263,12 +244,6 @@ F 3 "~" H 6100 1450 50  0001 C CNN
 	1    6100 1450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5600 1550 5600 1850
-Connection ~ 5600 1850
-Wire Wire Line
-	6100 1550 6100 1850
-Connection ~ 6100 1850
 Wire Wire Line
 	5600 1350 5850 1350
 $Comp
@@ -790,4 +765,44 @@ F 3 "" H 10650 2350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10650 2350 10650 2400
+Wire Wire Line
+	5600 1550 5600 1750
+Wire Wire Line
+	6100 1550 6100 1750
+$Comp
+L Device:Crystal_GND24_Small Y?
+U 1 1 5E29A20B
+P 5850 1750
+F 0 "Y?" H 5994 1796 50  0000 L CNN
+F 1 "Crystal_GND24_Small" H 5994 1705 50  0000 L CNN
+F 2 "" H 5850 1750 50  0001 C CNN
+F 3 "~" H 5850 1750 50  0001 C CNN
+	1    5850 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 1750 5600 1750
+Connection ~ 5600 1750
+Wire Wire Line
+	5600 1750 5600 2000
+Wire Wire Line
+	5950 1750 6100 1750
+Connection ~ 6100 1750
+Wire Wire Line
+	6100 1750 6100 2000
+Wire Wire Line
+	5850 1650 5850 1350
+$Comp
+L power:VSS #PWR?
+U 1 1 5E2A0FAF
+P 5850 1900
+F 0 "#PWR?" H 5850 1750 50  0001 C CNN
+F 1 "VSS" H 5868 2073 50  0000 C CNN
+F 2 "" H 5850 1900 50  0001 C CNN
+F 3 "" H 5850 1900 50  0001 C CNN
+	1    5850 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 1850 5850 1900
 $EndSCHEMATC
